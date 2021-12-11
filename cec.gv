@@ -1,0 +1,249 @@
+strict graph {
+charset="UTF-8"
+graph [overlap=false, splines=true, nodesep="0.36", fontname="sans-serif"]
+node [shape="box", style="rounded, filled", color="lightgray", fontname="sans-serif"]
+/*
+To decorate edges, e.g. like arrows, uncomment the following edge statement.
+http://www.graphviz.org/doc/info/attrs.html#k:arrowType
+*/
+//edge [dir=forward, arrowtail=normal, arrowhead=normal]
+
+<CEC line 5> [
+label=<CEC line 5<font point-size="9"><br align="left"/><i>
+Control signal line 5.1<br align="left"/>
+Free 5.1<br align="left"/>
+Test 5.1<br align="left"/>
+High impedance 5.2.1<br align="left"/>
+Low impedance 5.2.1<br align="left"/>
+High to low transition 5.1<br align="left"/>
+Pulses 5.1<br align="left"/>
+Pulling 5.2.2<br align="left"/>
+Error Handling 7.4<br align="left"/>
+Error checking 7.4<br align="left"/>
+Spurious pulses 7.4<br align="left"/>
+Low bit period 7.4<br align="left"/>
+Inactive 9<br align="left"/>
+Signal free time (period) 9<br align="left"/>
+Monitor 9<br align="left"/>
+Access 9.1<br align="left"/>
+System 10.2<br align="left"/>
+</i></font>>
+]
+
+<Transaction 5> [
+label=<Transaction 5>
+]
+
+<Initiator 2.2> [
+label=<Initiator 2.2<font point-size="9"><br align="left"/><i>
+Sender<br align="left"/>
+Sending 5<br align="left"/>
+Generates 5.1<br align="left"/>
+Transmitting 5.1<br align="left"/>
+Asserted bit 5.2.2<br align="left"/>
+Outputs 5.2.2<br align="left"/>
+Reads 6.2.1<br align="left"/>
+Become follower 9<br align="left"/>
+Second initiator 9<br align="left"/>
+Initiating device 9.1<br align="left"/>
+</i></font>>
+]
+
+<Followers 2.2> [
+label=<Followers 2.2<font point-size="9"><br align="left"/><i>
+Destination 2.2<br align="left"/>
+Receive 2.2<br align="left"/>
+Respond 2.2<br align="left"/>
+Recipient 5<br align="left"/>
+Asserted bit 5.2.2<br align="left"/>
+Generates 6.1.2<br align="left"/>
+Acknowledge 6.2.1<br align="left"/>
+Negatively acknowledge 7.2<br align="left"/>
+Reads 6.2.1<br align="left"/>
+Reject the message 6.2.1<br align="left"/>
+Receiving device 7<br align="left"/>
+Flow Control 7.2<br align="left"/>
+Notify 7.4<br align="left"/>
+Node 8<br align="left"/>
+</i></font>>
+]
+
+<Message 2.2> [
+label=<Message 2.2<font point-size="9"><br align="left"/><i>
+Broadcast message 2.2<br align="left"/>
+Directly addressed message 7.1<br align="left"/>
+Addressed 6.1.2<br align="left"/>
+Success 7<br align="left"/>
+Transfer 7<br align="left"/>
+Transmitted 7<br align="left"/>
+Acknowledged 7<br align="left"/>
+Received 7<br align="left"/>
+Acted upon 7<br align="left"/>
+Layer 9<br align="left"/>
+Send 9<br align="left"/>
+Time Constraints (application level) 9.2<br align="left"/>
+Response (time) 9.2<br align="left"/>
+Mandatory 10.2<br align="left"/>
+Generate 13.10.2<br align="left"/>
+</i></font>>
+]
+
+<Structure 5> [
+label=<Structure 5<font point-size="9"><br align="left"/><i>
+Timing 5.1<br align="left"/>
+Leading edges 5.1<br align="left"/>
+</i></font>>
+]
+
+<ACK 6.1.2> [
+label=<ACK 6.1.2<font point-size="9"><br align="left"/><i>
+Acknowledge 6.1.2<br align="left"/>
+Acknowledgement bits 5<br align="left"/>
+</i></font>>
+]
+
+<Frame 5.1> [
+label=<Frame 5.1<font point-size="9"><br align="left"/><i>
+Transfer 7<br align="left"/>
+Re-transmissions (attempt) 7<br align="left"/>
+Validation 7<br align="left"/>
+Valid 7<br align="left"/>
+Acknowledged 7.1<br align="left"/>
+Negatively acknowledged 7.1<br align="left"/>
+Re-try 7.1<br align="left"/>
+Send 7.4<br align="left"/>
+Transmit 9<br align="left"/>
+Success 9.1<br align="left"/>
+</i></font>>
+]
+
+<Start bit 5.1> [
+label=<Start bit 5.1<font point-size="9"><br align="left"/><i>
+Validated 5.2.1<br align="left"/>
+Low duration 5.2.1<br align="left"/>
+Total duration 5.2.1<br align="left"/>
+</i></font>>
+]
+
+<Data bits 5.1> [
+label=<Data bits 5.1<font point-size="9"><br align="left"/><i>
+Consistent timing 5.2.2<br align="left"/>
+Initiator asserted bit 5.2.2<br align="left"/>
+Follower asserted bit 5.2.2<br align="left"/>
+</i></font>>
+]
+
+<Bits 5> [
+label=<Bits 5<font point-size="9"><br align="left"/><i>
+Timing 1<br align="left"/>
+Following data bit 5.2.2<br align="left"/>
+Transmission 5.2.2<br align="left"/>
+Safe sample period 5.2.2<br align="left"/>
+Nominal sample time 5.2.2<br align="left"/>
+Start event 5.2.2<br align="left"/>
+State 5.2.2<br align="left"/>
+Logical 0 5.2.2<br align="left"/>
+Logical 1 5.2.2<br align="left"/>
+Period 5.2.2<br align="left"/>
+Indicate 6.1.1<br align="left"/>
+Specifies 6.1.1<br align="left"/>
+Set 6.1.2<br align="left"/>
+Valid 7.4<br align="left"/>
+Low 7.4<br align="left"/>
+Final 9<br align="left"/>
+</i></font>>
+]
+
+<Arbitration 5.1> [
+label=<Arbitration 5.1<font point-size="9"><br align="left"/><i>
+Mechanism 5.1<br align="left"/>
+Conflict 5.1<br align="left"/>
+Collisions 9<br align="left"/>
+Commences 9<br align="left"/>
+Lost 9<br align="left"/>
+</i></font>>
+]
+
+<Blocks 6> [
+label=<Blocks 6<font point-size="9"><br align="left"/><i>
+Start 6<br align="left"/>
+Header 6<br align="left"/>
+Data 6<br align="left"/>
+Opcode 6<br align="left"/>
+Operand 6<br align="left"/>
+Structure 6.1<br align="left"/>
+Final 6.1.1<br align="left"/>
+Field 6.1.2<br align="left"/>
+Success 6.1.2<br align="left"/>
+Transmission 6.1.2<br align="left"/>
+Process 7.2<br align="left"/>
+</i></font>>
+]
+
+<EOM> [
+label=<EOM<font point-size="9"><br align="left"/><i>
+End of Message 6.1.1<br align="left"/>
+</i></font>>
+]
+
+<Device 2.2> [
+label=<Device 2.2<font point-size="9"><br align="left"/><i>
+Take the logical addresses 10.2<br align="left"/>
+Declare the functionality 10.2<br align="left"/>
+Expose the functionality 10.2<br align="left"/>
+Advertise one instance of a particular functionality 10.2<br align="left"/>
+Supports messages 10.2<br align="left"/>
+Retains that address 10.2.1<br align="left"/>
+Keeps that address 10.2.1<br align="left"/>
+Sharing this address 10.2.1<br align="left"/>
+Lose its logical address 10.2.1<br align="left"/>
+Remember its previous logical address 10.2.1<br align="left"/>
+Disconnected or switched off 10.2.1<br align="left"/>
+Reconnected or switched on 10.2.1<br align="left"/>
+Polling process 10.2.1<br align="left"/>
+</i></font>>
+]
+
+<Address 2.2> [
+label=<Address 2.2<font point-size="9"><br align="left"/><i>
+Physical 2.2<br align="left"/>
+Logical 2.2<br align="left"/>
+Clear 2.2<br align="left"/>
+Source 6<br align="left"/>
+Destination 6<br align="left"/>
+Physical Address Discovery 10.1<br align="left"/>
+Allocate 10.1<br align="left"/>
+Association between its logical and physical addresses 10.1<br align="left"/>
+Map of physical connections to logical addresses 10.1<br align="left"/>
+Defines a device type 10.2<br align="left"/>
+Use 10.2.1<br align="left"/>
+Type specific 10.2.1<br align="left"/>
+</i></font>>
+]
+
+<Information bits 6.1> [
+label=<Information bits 6.1>
+]
+
+
+<CEC line 5> -- <Transaction 5>
+<Transaction 5> -- <Initiator 2.2>
+<Transaction 5> -- <Followers 2.2>
+<Transaction 5> -- <Message 2.2>
+<Initiator 2.2> -- <Structure 5>
+<Followers 2.2> -- <ACK 6.1.2>
+<Message 2.2> -- <Frame 5.1>
+<Bits 5> -- <Start bit 5.1>
+<Bits 5> -- <Data bits 5.1>
+<Bits 5> -- <Structure 5>
+<CEC line 5> -- <Arbitration 5.1>
+<Data bits 5.1> -- <ACK 6.1.2>
+<Frame 5.1> -- <Blocks 6>
+<Blocks 6> -- <Bits 5>
+<Device 2.2> -- <Address 2.2>
+<Device 2.2> -- <Initiator 2.2>
+<Device 2.2> -- <Followers 2.2>
+<Data bits 5.1> -- <EOM>
+<Data bits 5.1> -- <Information bits 6.1>
+<Structure 5> -- <Blocks 6>
+}
