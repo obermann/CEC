@@ -5,7 +5,6 @@ This CEC specification is surprisingly tangled, with terms defined only to be re
 There are many terms and protocol levels do not necessarily fit the structure of the specification chapters.
 To develop a CEC nomenclature for structural programming, a concept map is needed.
 
-In cec.gv every term is suffixed by the chapter number from CEC specification.
 Every term in cec.gv has a chapter number from CEC specification associated with it.
 Under each heading are its synonyms, themes and actions where it appears.
 
@@ -13,7 +12,7 @@ Under each heading are its synonyms, themes and actions where it appears.
 
 https://en.wikipedia.org/wiki/Consumer_Electronics_Control
 
-cec.gv created with [vismm](https://github.com/obermann/vismm) and [Graphviz](https://graphviz.org/).
+cec.gv created with [vismm](https://github.com/obermann/vismm) and [GraphViz](https://graphviz.org/).
 
 ### HDMI Specification 1.3a Download Links
 
